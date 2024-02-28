@@ -1,23 +1,21 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 
-int main() {
-    int n;
-    cin >> n;
-    
-    vector <int> vec(n);
-    for(int i = 0; i < n; i++) {
-        cin >> vec[i];
-    }
+int main () {
+    int size;
+    cin >> size;
     
     int sum = 0;
-    for(int i = 0; i < n; i++) {
-        sum += vec[i];
+    int *myVector = new int[size];
+    
+    for(int i = 0; i < size; i++) {
+        cin >> myVector[i];
+        sum += myVector[i];
     }
     
     cout << sum << endl;
     
+    delete[] myVector;
     return 0;
 }
