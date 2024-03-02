@@ -1,21 +1,14 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
-int main () {
-    int size;
-    cin >> size;
-    
-    int sum = 0;
-    int *myVector = new int[size];
-    
+int main() {
+    int size; cin >> size;
+    vector<int> arr; int sum = 0;
     for(int i = 0; i < size; i++) {
-        cin >> myVector[i];
-        sum += myVector[i];
+        int val; cin >> val;
+        arr.push_back(val);
+        sum += arr[i];
     }
-    
-    cout << sum << endl;
-    
-    delete[] myVector;
+    cout << sum;
     return 0;
 }
